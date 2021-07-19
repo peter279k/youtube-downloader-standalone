@@ -23,14 +23,6 @@ do
     else
         echo "Building $tag_name with PHP-$php_version has been failed!"
     fi;
-    git config user.name "peter279k"
-    git config user.email "peter279k@gmail.com"
-    git add -A
-    timestamp=$(date -u)
-    git pull origin "php-$php_version"
-    git commit -m "Last Commit: ${timestamp}(TW)" || exit 0
-    git branch "php-$php_version"
-    git push origin "php-$php_version"
 done;
 
 tag_name="master"
@@ -48,12 +40,3 @@ if [[ $? == 0 ]]; then
 else
     echo "Building $tag_name with PHP-$php_version has been failed!"
 fi;
-
-git config user.name "peter279k"
-git config user.email "peter279k@gmail.com"
-git add -A
-timestamp=$(date -u)
-git pull origin "php-$php_version"
-git commit -m "Last Commit: ${timestamp}(TW)" || exit 0
-git branch "php-$php_version"
-git push origin "php-$php_version"
