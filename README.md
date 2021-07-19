@@ -6,6 +6,7 @@ It's a standalone Phar building for [Athlon1600/youtube-downloader](https://gith
 
 ## Usage
 
+- Switch current branch name to select specific PHP version.
 - Download current released `youtube-downloader.phar` version that can be found on released version directories.
 
 - Sample codes about using this phar file are as follows:
