@@ -24,12 +24,3 @@ jobs:
           coverage: none
       - name: Run build.sh shell script
         run: ./build.sh ${{ matrix.php-versions }}
-      - name: Commit and push if it changed
-        run: |
-          git config user.name "peter279k"
-          git config user.email "peter279k@gmail.com"
-          git add -A
-          timestamp=$(date -u)
-          git pull origin master
-          git commit -m "Last Commit: ${timestamp}(TW)" || exit 0
-          git push origin master
