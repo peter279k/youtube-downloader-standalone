@@ -13,6 +13,8 @@ for tag_name in $(git tag)
 do
     if [[ ! -d "../$tag_name" ]]; then
         mkdir "../$tag_name"
+        mkdir "../$tag_name/php-$php_version"
+    else
         if [[ ! -d "../$tag_name/php-$php_version" ]]; then
             mkdir "../$tag_name/php-$php_version"
         fi;
@@ -30,6 +32,8 @@ done;
 tag_name="master"
 if [[ ! -d "../$tag_name" ]]; then
     mkdir "../$tag_name"
+    mkdir "../$tag_name/php-$php_version"
+else
     if [[ ! -d "../$tag_name/php-$php_version" ]]; then
         mkdir "../$tag_name/php-$php_version"
     fi;
