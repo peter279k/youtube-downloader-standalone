@@ -6,11 +6,12 @@ git clone https://github.com/Athlon1600/youtube-downloader
 
 cd youtube-downloader/
 
-composer update -n
 curl -JL https://clue.engineering/phar-composer-latest.phar -o phar-composer.phar
 
 for tag_name in $(git tag)
 do
+    git checkout $tag_name
+    composer update -n
     if [[ ! -d "../$tag_name" ]]; then
         mkdir "../$tag_name"
         mkdir "../$tag_name/php-$php_version"
@@ -30,6 +31,8 @@ do
 done;
 
 tag_name="master"
+git checkout $tag_name
+composer update -n
 if [[ ! -d "../$tag_name" ]]; then
     mkdir "../$tag_name"
     mkdir "../$tag_name/php-$php_version"
