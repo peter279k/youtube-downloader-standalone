@@ -32,4 +32,5 @@ jobs:
           timestamp=$(date -u)
           git commit -m "Last Commit: ${timestamp}(TW)" || exit 0
           git branch php-${{ matrix.php-versions }}
+          git pull origin php-${{ matrix.php-versions }}
           git push origin php-${{ matrix.php-versions }}
