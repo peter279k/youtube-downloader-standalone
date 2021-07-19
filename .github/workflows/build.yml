@@ -3,7 +3,6 @@ name: Building standalone youtube-downloader phar
 on:
   schedule:
     - cron: '30 * * * *'
-    - branches: 'master'
   workflow_dispatch:
 
 jobs:
@@ -16,7 +15,7 @@ jobs:
       - name: Get working copy
         uses: actions/checkout@master
         with:
-          fetch-depth: 1
+          ref: master
       - name: Set up PHP environment
         uses: shivammathur/setup-php@v2
         with:
