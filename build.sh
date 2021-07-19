@@ -18,7 +18,7 @@ do
         fi;
     fi;
     php ./phar-composer.phar build ./ 2>&1 > /dev/null
-    cp youtube-downloader.phar "../$tag_name/php-$php_version"
+    cp youtube-downloader.phar "../$tag_name/php-$php_version/"
     rm -f youtube-downloader.phar
     if [[ $? == 0 ]]; then
         echo "Builidng $tag_name with PHP-$php_version has been done."
@@ -36,7 +36,7 @@ if [[ ! -d "../$tag_name" ]]; then
 fi;
 
 php ./phar-composer.phar build ./ 2>&1 > /dev/null
-cp youtube-downloader.phar "../$tag_name/php-$php_version"
+cp youtube-downloader.phar "../$tag_name/php-$php_version/"
 rm -f youtube-downloader.phar
 if [[ $? == 0 ]]; then
     echo "Builidng $tag_name with PHP-$php_version has been done."
