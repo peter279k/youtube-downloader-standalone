@@ -23,7 +23,7 @@ jobs:
           extensions: mbstring, intl, zip
           coverage: none
       - name: Run build.sh shell script
-        run: ./build.sh $ {{ matrix.php-versions }}
+        run: ./build.sh ${{ matrix.php-versions }}
       - name: Commit and push if it changed
         run: |
           git config user.name "peter279k"
