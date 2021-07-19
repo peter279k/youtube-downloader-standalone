@@ -31,4 +31,5 @@ jobs:
           git add -A
           timestamp=$(date -u)
           git commit -m "Last Commit: ${timestamp}(TW)" || exit 0
+          git pull origin master --quiet
           git push origin master
