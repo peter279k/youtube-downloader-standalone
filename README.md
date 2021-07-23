@@ -22,3 +22,6 @@ require_once 'phar://path/to/youtube-downloader.phar/vendor/autoload.php';
 
 // Do some stuffs for developers!
 ```
+
+## License
+The MIT License (MIT). Please see [License File](LICENSE) for more information.
